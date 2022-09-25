@@ -1,0 +1,23 @@
+print("!WELCOME TO THE SECRET AUCTION!")
+import art
+
+print(art.logo)
+print()
+bidmoney = []
+bidname = []
+whlcond = True
+
+while whlcond:
+
+    name = [input('What is your name ?: ')]
+    bidname += name
+    bid = [int(input("what is your bid? : $"))]
+    bidmoney += bid
+    ok = input("Are there any other bidders? Type 'yes or 'no'.\n")
+    maxbid = max(bidmoney)
+    bidposition = bidmoney.index(maxbid)
+    winnername = bidname[bidposition]
+    if ok == "no":
+        print(f"The winner is {winnername} with a bid of ${maxbid}")
+        whlcond = False
+
